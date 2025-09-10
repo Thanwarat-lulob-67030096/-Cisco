@@ -1,28 +1,20 @@
-เข้าใจแล้วครับ 🙌
-คุณอยากเก็บ **คำอธิบาย + config** ใน Git ให้สวยงามเป็น markdown (`README.md`) โดยไม่เปลี่ยนเนื้อหา เพียงแค่จัดให้อ่านง่ายเหมือนโค้ดเท่านั้น
-
-ผมจัดให้ออกมาเป็น **Markdown พร้อม code block** (ใช้ภาษา `shell`/`cisco` ให้ดูดีเวลา preview ใน GitHub)
-
+1️⃣ External Router (จำลอง Internet / ISP)
 ---
 
 ````markdown
-# Packet Tracer Config – NAT + ACL + External Router
-
-## 1️⃣ External Router (จำลอง Internet / ISP)
-```shell
 enable
 configure terminal
 
 ! Interface เชื่อม R1
 interface g0/0/0
- ip address 200.200.200.1 255.255.255.252
- no shutdown
+ip address 200.200.200.1 255.255.255.252
+no shutdown
 exit
 
 ! Interface เชื่อม WebServer
 interface g0/0/1
- ip address 200.200.100.1 255.255.255.252
- no shutdown
+ip address 200.200.100.1 255.255.255.252
+no shutdown
 exit
 
 ! Routing กลับไป LAN
@@ -30,6 +22,7 @@ ip route 192.96.0.0 255.255.0.0 200.200.200.2
 
 end
 write memory
+
 ````
 
 ---
